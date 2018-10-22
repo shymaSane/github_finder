@@ -18,9 +18,9 @@
 <body>
     <main id="main" class="main">
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+        <nav class="navbar navbar-expand-md bg-danger">
             <div class="container-fluid d-flex justify-content-center">
-                <a href="#" class="navbar-brand text-center">GitHub Finder</a>
+                <a href="#" class="navbar-brand text-center text-white">GitHub Finder</a>
             </div>
         </nav>
         <!-- End of navbar -->
@@ -28,21 +28,40 @@
         <div class="container">
             <div class="row text-center d-flex justify-content-center m-5">
                 <div class="search" id="search">
-                    <h3 class="search_title">Search Github Users</h3>
-                    <p class="search_description">Enter a username to fetch a user profile and repos</p>
+                    <h3 class="text-danger">Search Github Users</h3>
+                    <p class="text-white">Enter a username to fetch a user profile and repos</p>
                     <div class="input-group input-group-lg ">
-                        <input type="search" name="search" id="search_user" class="form-control btn-outline-primary">
+                        <input type="search" name="search" id="search_user" class="form-control btn-outline-danger">
                         <div class="input-group-append">
-                            <button type="submit" class="btn btn-outline-warning"><i class="fas fa-search"></i></button>
+                            <button type="submit" class="btn btn-danger btn_search"><i class="fas fa-search"></i></button>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
-        
         <!-- End of search section -->
-        <div class="show_results"></div>
+        <!-- Show Results section -->
+        <div class="container show_1 p-3 d-none">
+            <div class="row d-flex justify-content-center align-content-center">
+                <div class="image-group col-md-3 col-8">
+                    <img src="http://i0.wp.com/musliminc.com/wp-content/uploads/2015/09/Dave-Chappel.jpg?fit=1200%2C1200" alt="profile picture" class="rounded float-left profile_img mb-3 w-100">
+                    <button class="btn btn-danger btn_profile btn-block "><a href="" class="text-white profile_a" target="_blank">View profile</a></button>
+                </div>
+                <div class="info_group col-md-9 col-8">
+                    <div class="btn-group d-flex flex-column flex-md-row justify-content-md-around mt-3 mt-md-0 w-100">
+                        <button class="btn btn-danger rounded my-2 my-md-0 button1"></button>
+                        <button class="btn btn-danger rounded my-2 my-md-0 button2"></button>
+                        <button class="btn btn-danger rounded my-2 my-md-0 button3"></button>
+                    </div>
+                    <ul class="list-group my-md-3">
+                        <li class="list-group-item bg-dark text-white li1"></li>
+                        <li class="list-group-item bg-dark text-white li2"></li>
+                        <li class="list-group-item bg-dark text-white li3"></li>
+                        <li class="list-group-item bg-dark text-white li4"></li>
+                    </ul>
+                </div>
+            </div>         
+        </div>
     </main>
     <!-- Jquery for bootstrap -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

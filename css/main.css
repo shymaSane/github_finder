@@ -1,3 +1,17 @@
-.search .input-group .input-group-append .btn:hover{
-    color: blue !important;
+html,
+body{
+    width: 100%;
+}
+#main {
+    margin: 0;
+    background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)), url('../img/cover1.jpeg');
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.show_1{
+    background: rgba(0,0,0,.8);
+    display: none;
 }
