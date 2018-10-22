@@ -5,18 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>GitHub Finder</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Main css file -->
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <!-- Bootstrap css file-->
+    <link rel="stylesheet"  href="css/bootstrap.min.css" />
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <!-- Main javascript file -->
     <script src="js/main.js"></script>
+    
 </head>
 <body>
     <main id="main" class="main">
-        <div class="search" id="search">
-            <h1 class="search_title">Search Github Users</h1>
-            <p class="search_description">Enter a username to fetch a user profile and repos</p>
-            <input type="search" name="search" id="search_user">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+            <div class="container-fluid d-flex justify-content-center">
+                <a href="#" class="navbar-brand text-center">GitHub Finder</a>
+            </div>
+        </nav>
+        <!-- End of navbar -->
+        <!-- Search section -->
+        <div class="container">
+            <div class="row text-center d-flex justify-content-center m-5">
+                <div class="search" id="search">
+                    <h3 class="search_title">Search Github Users</h3>
+                    <p class="search_description">Enter a username to fetch a user profile and repos</p>
+                    <div class="input-group input-group-lg ">
+                        <input type="search" name="search" id="search_user" class="form-control btn-outline-primary">
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-outline-warning"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
         </div>
+        
+        <!-- End of search section -->
         <div class="show_results"></div>
     </main>
-   
+    <!-- Jquery for bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap javascript file -->
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>

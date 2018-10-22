@@ -14,7 +14,10 @@ document.addEventListener("DOMContentLoaded", function() {
         
         fetch(`http://api.github.com/users/${user}?client_id=${clientId}&client_secret=${clientSecret}`)
         .then((res) => res.json())
-        .then((data) => console.log(data))
+        .then((data) => {
+            console.log(data);
+
+        })
     }
     
   });
