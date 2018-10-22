@@ -50,6 +50,8 @@ document.addEventListener("DOMContentLoaded", function() {
             show_div_1.classList.remove('d-none')
             show_div_1.classList.add('d-block')
 
+        }).catch((error) => {
+            console.log('can not reach to your wifi')
         })
     }
     
