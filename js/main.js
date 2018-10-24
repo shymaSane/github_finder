@@ -4,20 +4,21 @@ document.addEventListener("DOMContentLoaded", function() {
     //1- getting the search input
     let search_input = document.getElementById('search_user');
     let search = document.querySelector('.btn_search');
+    
     const clientId = '7c55f2d7af345f500ff9';
     const clientSecret = '5ecf2d38f0f46fd806f28743ee07ffa6c651e7a1';
 
     //2- add keyup event 
-    search.addEventListener('click', getUser)
+    search.addEventListener('click', getUser);
+    search.addEventListener('click', getRepos);
 
     function getUser(){
-        let user = search_input.value;
         
+        let user = search_input.value;
         fetch(`http://api.github.com/users/${user}?client_id=${clientId}&client_secret=${clientSecret}`)
         .then((res) => res.json())
         .then((data) => {
-            console.log(data);
-            let output ="";
+            // console.log(data);
             // change image
             let image = document.querySelector('.profile_img');
             image.src = data.avatar_url;
@@ -52,6 +53,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
         }).catch((error) => {
             console.log('can not reach to your wifi')
+        })
+    }
+    // https://api.github.com/users/[user name]/repos?callback=abc
+    function getRepos() {
+        let user = search_input.value;
+        fetch(`http://api.github.com/users/${user}/repos?client_id=${clientId}&client_secret=${clientSecret}`)
+        .then((res) => res.json())
+        .then((data) => {
+            console.log(data)
         })
     }
     
