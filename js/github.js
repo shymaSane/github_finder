@@ -12,5 +12,11 @@ class Github {
         return {
             profile
         }
+    };
+
+    async getRepos(user){
+        const fetchRepos = await fetch(`http://api.github.com/users/${user}/repos?client_id=${this._clientId}&client_secret=${this._clientSecret}`);
+        
+        
     }
 }
