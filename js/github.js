@@ -7,16 +7,15 @@ class Github {
     }
 
     async getUsers(user){
-        let fetchUser = await fetch(`http://api.github.com/users/${user}?client_id=${this._clientId}&client_secret=${this._clientSecret}`);
-        let profile = await fetchUser.json();
+        //fetch profile
+        const fetchUser = await fetch(`http://api.github.com/users/${user}?client_id=${this._clientId}&client_secret=${this._clientSecret}`);
+        const profile = await fetchUser.json();
+        //fetch repos
+        const fetchRepos = await fetch(`http://api.github.com/users/${user}/repos?client_id=${this._clientId}&client_secret=${this._clientSecret}`);
+        const repos = await fetchRepos.json()
         return {
-            profile
+            profile,
+            repos
         }
     };
-
-    async getRepos(user){
-        const fetchRepos = await fetch(`http://api.github.com/users/${user}/repos?client_id=${this._clientId}&client_secret=${this._clientSecret}`);
-        
-        
-    }
 }

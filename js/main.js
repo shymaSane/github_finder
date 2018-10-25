@@ -2,11 +2,11 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     //1- getting the search input
-    let search = document.getElementById('search_user');
+   const search = document.getElementById('search_user');
     //init github class
-    let github = new Github;
+   const github = new Github;
     //init ui class
-    let ui = new UI;
+   const ui = new UI;
     //2- add keyup event to input result
     search.addEventListener('keyup', (e) => {
         //current input value
@@ -15,11 +15,12 @@ document.addEventListener("DOMContentLoaded", function() {
         if(currentUser !== ""){
             github.getUsers(currentUser)
             .then(data => {
+                console.log(data)
                 if(data.profile.message === "Not Found"){
                     //print not found
                 } else{
                     //show results
-                   ui.showUi(data.profile)
+                   ui.showUi(data)
                 }
             })
         } else{
