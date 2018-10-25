@@ -12,8 +12,14 @@ document.addEventListener("DOMContentLoaded", function() {
         if(currentUser !== ""){
             github.getUsers(currentUser)
             .then(data => {
-                console.log(data)
+                if(data.profile.message === "Not Found"){
+                    //print not found
+                } else{
+                    //show results
+                }
             })
+        } else{
+            //clear prfile
         }
         
         
